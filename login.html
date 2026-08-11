@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Portal Login</title>
+<style>
+body{background-image:url("log.jpg");
+}
+.container{
+    width:300px;
+    margin:100px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+input{
+    width:90%;
+    padding:8px;
+    margin:10px;
+}
+button{
+    padding:10px 20px;
+    background:green;
+    color:white;
+    border:none;
+}
+</style>
+<script>
+function login(){
+    let user = document.getElementById("user").value.trim();
+    let pass = document.getElementById("pass").value.trim();
+    if(user==""){
+        alert("Please enter Username");
+        return false;
+    }
+    if(user.length < 6){
+        alert("Username must be at least 6 characters");
+        return false;
+    }
+    if(pass==""){
+        alert("Please enter Password");
+        return false;
+    }
+    if(pass.length < 6){
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+    alert("Login Successful");
+    window.location.href = "resume.html";
+    return false;
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+<h2>Job Portal Login</h2>
+
+<form onsubmit="return login()">
+<input type="text" id="user" placeholder="Username"><br>
+<input type="password" id="pass" placeholder="Password"><br>
+<button type="submit">Login</button>
+</form>
+</div>
+</body>
+</html>

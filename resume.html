@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Seeker Registration</title>
+<style>
+body{
+    background-image:url("res.jpg");
+    background-size:cover;
+    font-family:Tahoma,sans-serif;
+    background-color:#fff4e6;
+}
+.container{
+    width:500px;
+    margin:auto;
+    margin-top:20px;
+    background:white;
+    border:2px solid #cc9900;
+    padding:20px;
+    border-radius:10px;
+}
+h2{
+    text-align:center;
+    color:#b36b00;
+}
+table{
+    width:100%;
+}
+td{
+    padding:8px;
+}
+input,select,textarea{
+    width:100%;
+    padding:6px;
+    box-sizing:border-box;
+}
+input[type=radio],
+input[type=checkbox]{
+    width:auto;
+
+.button{
+    text-align:center;
+}
+.button input{
+    width:100px;
+    padding:8px;
+    margin:5px;
+}
+</style>
+<script>
+function upperName()
+{
+    var name=document.getElementById("name");
+    name.value=name.value.toUpperCase();
+}
+function validateForm()
+{
+    if(confirm("Are you sure you want to Register?"))
+    {
+        alert("Registration Successful");
+        return true;
+    }
+    return false;
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h2>JOB SEEKER REGISTRATION</h2>
+<form onsubmit="return validateForm()">
+<table>
+<tr>
+<td>Applicant Name</td>
+<td>
+<input type="text"
+       id="name"
+       placeholder="Enter Full Name"
+       onkeyup="upperName()"
+       required>
+</td>
+</tr>
+<tr>
+<td>Email Address</td>
+<td>
+<input type="email"
+       id="email"
+       placeholder="Enter Email Address"
+       required>
+</td>
+</tr>
+<tr>
+<td>Contact Number</td>
+<td>
+<input type="tel"
+       id="contact"
+       placeholder="Enter 10 Digit Mobile Number"
+       pattern="[0-9]{10}"
+       maxlength="10"
+       required
+       title="Enter exactly 10 digits">
+</td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td>
+<input type="password"
+       id="password"
+       placeholder="Minimum 6 Characters"
+       minlength="6"
+       required>
+</td>
+</tr>
+<tr>
+<td>Date of Birth</td>
+<td>
+<input type="date" id="dob" required>
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td>Address</td>
+<td>
+<textarea rows="3"
+          placeholder="Enter Your Address"
+          required></textarea>
+</td>
+</tr>
+<tr>
+<td>Apply For Company</td>
+<td>
+<select id="company" required>
+<option value="">Select Company</option>
+<option>TCS (Tata Consultancy Services)</option>
+<option>Infosys</option>
+<option>Wipro</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="button">
+<input type="button"
+       value="Back"
+       onclick="window.location='login.html'">
+<input type="submit"
+       value="Register">
+<input type="reset"
+       value="Reset"
+</td>
+</tr
+</table>
+</form
+</div
+</body>
+</html>
